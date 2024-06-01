@@ -1,4 +1,5 @@
 {
 	"name": "Rustdev",
-	"build": { "dockerfile": "Dockerfile" }
+	"build": { "dockerfile": "Dockerfile" },
+	"containerUser": "ubuntu"
 }
