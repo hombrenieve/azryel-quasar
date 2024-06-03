@@ -1,5 +1,14 @@
 {
 	"name": "Rustdev",
 	"build": { "dockerfile": "Dockerfile" },
-	"containerUser": "ubuntu"
+	"containerUser": "ubuntu",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"rust-lang.rust-analyzer",
+				"vadimcn.vscode-lldb",
+				"swellaby.vscode-rust-test-adapter"
+			]
+		}
+	}
 }

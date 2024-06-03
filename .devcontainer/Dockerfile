@@ -1,8 +1,12 @@
 FROM ubuntu:24.04
 ARG TOOLCHAIN=1.78.0
+ARG TZ=Europe/Madrid
+
+ENV DEBIAN_FRONTEND=noninteractive
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN apt -y update && apt -y upgrade &&\
-    apt -y install build-essential curl git &&\
+    apt -y install build-essential curl git tzdata rust-lldb &&\
     rm -rf /var/lib/apt/lists/*
 
 # Use user ubuntu
